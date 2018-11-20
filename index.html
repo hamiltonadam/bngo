@@ -62,10 +62,8 @@
 			];
 			const FREE_SPACE = 'FREE SPACE';
 			function renderTable() {
-				// clear out the old crap
 				const bingoBodyElem = document.querySelector('.bingo-body');
 				bingoBodyElem.innerHTML = '';
-				// make a clean copy of the array
 				const shuffledItems = Array.from(TASKS);
 				for (let i = 0; i < shuffledItems.length; i++) {
 					const swapIdx = Math.floor(Math.random() * (shuffledItems.length - i)) + i;
@@ -91,7 +89,6 @@
 						});
 						rowElem.appendChild(cellElem);
 					});
-					// stick it in the tbody
 					bingoBodyElem.appendChild(rowElem);
 				});
 			}
@@ -139,7 +136,7 @@
 			}
 			/* free space */
 			tr:nth-child(3) td:nth-child(3) {
-				background-color: 00ff44;
+				background-color: f21f40;
 				color: white;
 				font-family: Helvetica;
 				text-align: center;
